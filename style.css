@@ -1,0 +1,167 @@
+body {
+	margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+
+    z-index: 100;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.top_menu {
+    position: relative;
+    z-index: 200;
+    background: #fff;
+    box-shadow: 0px 2px 17px 0px rgba(35,31,32,0.15);
+    box-sizing: border-box;
+
+    height: 9vh;
+    padding: 2vh 0;
+}
+
+.nav-up {
+  top: -9vh;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    display: block;
+    float: left;
+    height: 5vh;
+    width: 5vh;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.icon-navigation-menu, .icon-navigation-menu:visited {
+    margin: 0 0 0 2vh;
+    color: #000;
+}
+
+.icon-close, .icon-close:visited {
+    position: absolute;
+    left: 33vh;
+    top: 2vh;
+
+    color: #fff;
+}
+
+.panel-menu .aesc {
+    position: absolute;
+    left: 2vh;
+    top: 2vh;
+
+    height: 5vh;
+    width: auto;
+
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.aesc strong {
+    font-size: 5vh;
+    color: #fff;
+}
+
+.panel-menu {
+    z-index: 999999999;
+    position: fixed;
+    left: -40vh;
+    top: 0;
+    width: 40vh;
+    height: 100%;
+    transition: left 200ms;
+    transition-property: left;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background-color: #242424;
+}
+
+.panel-menu .header {
+    position: relative;
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+
+    height: 9vh;
+    padding: 2vh 0;
+    box-sizing: border-box;
+}
+
+.panel-menu.active {
+    left: 0;
+}
+
+.first {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff url(logo-smaller.png) no-repeat;
+}
+
+.second {    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000 url(logo2-smaller.png) no-repeat;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    padding: 120px 0;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.first, .second {
+    padding: 0;
+}
+
+@keyframes headerIn {
+    0% {
+        opacity: 0;
+        letter-spacing: 0.75em;
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: 0.25em;
+    }
+}
+
+.header-text {
+    font-size: 5vh;
+
+    text-align: center;
+    color: #000;
+
+    letter-spacing: 0.25em;
+    opacity: 1;
+    animation: headerIn 3s;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: headerIn;
+}
