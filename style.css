@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 }
@@ -5,7 +9,7 @@ body {
 header {
     position: fixed;
     top: 0;
-    transition: top 0.2s ease-in-out;
+    transition: top 0.1s ease-in-out;
     width: 100%;
 
     z-index: 100;
@@ -13,12 +17,10 @@ header {
     background: #fff;
 }
 
-.top_menu {
+.top-menu {
     position: relative;
     z-index: 200;
-    background: #fff;
     box-shadow: 0 2px 17px 0 rgba(35,31,32,0.15);
-    box-sizing: border-box;
 
     height: 9vh;
     padding: 2vh 0;
@@ -48,17 +50,13 @@ header {
 
 .icon-close, .icon-close:visited {
     position: absolute;
-    left: 33vh;
+    left: 43vh;
     top: 2vh;
 
     color: #fff;
 }
 
-.panel-menu .aesc {
-    position: absolute;
-    left: 2vh;
-    top: 2vh;
-
+.aesc {
     height: 5vh;
     width: auto;
 
@@ -67,7 +65,23 @@ header {
     align-items: center;
 }
 
-.aesc strong {
+.panel-menu .aesc {
+    position: absolute;
+    left: 3vh;
+    top: 2vh;
+}
+
+.top-menu .aesc {
+    position: relative;
+    margin: 0 0 0 2vh;
+}
+
+.top-menu .aesc strong {
+    font-size: 5vh;
+    color: #000;
+}
+
+.panel-menu .aesc strong {
     font-size: 5vh;
     color: #fff;
 }
@@ -75,9 +89,9 @@ header {
 .panel-menu {
     z-index: 999999999;
     position: fixed;
-    left: -40vh;
+    left: -50vh;
     top: 0;
-    width: 40vh;
+    width: 50vh;
     height: 100%;
     transition: left 200ms;
     transition-property: left;
@@ -97,7 +111,6 @@ header {
 
     height: 9vh;
     padding: 2vh 0;
-    box-sizing: border-box;
 }
 
 .panel-menu.active {
@@ -110,7 +123,8 @@ header {
     justify-content: center;
     align-items: center;
 
-    background: #fff url(logo-smaller.png) no-repeat;
+    background: #fff;
+    /*background: #fff url(logo-smaller.png) no-repeat;*/
 }
 
 .second {    
@@ -119,7 +133,8 @@ header {
     justify-content: center;
     align-items: center;
 
-    background: #000 url(logo2-smaller.png) no-repeat;
+    background: #000;
+    /*background: #000 url(logo2-smaller.png) no-repeat;*/
 }
 
 .content {
@@ -149,6 +164,7 @@ header {
 
 .header-text {
     font-size: 5vh;
+    font-family: "als vlas hairline";
 
     text-align: center;
     color: #000;
@@ -164,4 +180,59 @@ header {
     animation-fill-mode: none;
     animation-play-state: running;
     animation-name: headerIn;
+}
+
+.panel-menu-body {
+    height: 100%;
+    padding: 3vh 1vh 1vh 0;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+ul {
+    list-style: none;
+    display: block;
+    margin: 0.5vh 0 0 0;
+    padding: 0 0 0 8vh;
+}
+
+ul:first-child {
+    margin: 0;
+}
+
+li {
+    margin: 0.5em 0;
+    position: relative;
+}
+
+li.active:before {
+    content: '\2022';
+    position: absolute;
+    left: -4.5vh;
+    top: 1vh;
+    width: 2vh;
+    height: 2vh;
+    line-height: 2vh;
+    text-align: center;
+    font-size: 4.5vh;
+    color: #ef5d55;
+}
+
+.panel-menu-body ul a {
+    font-family: "als schlange sans";
+    font-weight: light;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: #fff;
+}
+
+.panel-menu-body ul li.active a {
+    color: #ef5d55;
 }
