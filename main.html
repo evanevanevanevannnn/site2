@@ -31,10 +31,31 @@
 			}, 3500);
 		}
 	</script>
+	<!-- Kek dobavil -->
+	<script>
+		$(document).ready(function() {  
+			var winHeight = $(window).height(), 
+			docHeight = $(document).height(),
+			progressBar = $('progress'), max, value;
+
+			max = docHeight - winHeight;
+			progressBar.attr('max', max);
+
+			value = $(window).scrollTop();
+			progressBar.attr('value', value);
+
+			$(document).on('scroll', function(){
+				value = $(window).scrollTop();
+				progressBar.attr('value', value);
+			});
+		});
+	</script>
+	<!-- Konec! -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="icofont.css">
 </head>
 <body onload="nav_menu_alert()">
+	<progress value="0"> </progress>
 	<div class="info">
 		<p class="icon-arrow-left icofont-arrow-left"></p>
 		<p>чтобы открыть меню навигации переместите курсор влево</p>
