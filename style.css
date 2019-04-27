@@ -6,6 +6,92 @@ body {
 	margin: 0;
 }
 
+header {
+    z-index: 100;
+    position: fixed;
+
+    top: -10vh;
+    left: 0;
+
+    width: 100%;
+
+    transition: top 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+header.active {
+    top: 0;
+}
+
+.article {
+    width: 100%;
+    height: auto;
+
+    border-radius: 3vh;
+    overflow: hidden;
+
+    border: 1px solid black;
+}
+
+.article .background {
+    width: 100%;
+    height: 100%;
+}
+
+.article-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 10vw;
+}
+
+.blank {
+    z-index: 2;
+    position: relative;
+
+    width: 100%;
+    height: 9vh;
+}
+
+.nav-bar {
+    z-index: 200;
+    position: relative;
+
+    padding: 2vh 10vw;
+
+    display: flex;
+    width: 100%;
+    height: 9vh;
+
+    background: #fff;
+    box-shadow: 0 0 1vh 1vh rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar div {
+    margin: 0 2vh;
+}
+
+.nav-bar div:first-child {
+    margin-right: 0;
+}
+
+.article-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 100%;
+    margin: 10vh 0;
+
+    padding: 0 10vw;
+}
+
 .info {
     position: fixed;
     z-index: 100;
@@ -17,7 +103,7 @@ body {
     height: 9vh;
 
     border-radius: 2vh;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(230, 230, 230);
 
     transition: top 0.5s;
     transition-timing-function: ease-in-out;
@@ -50,7 +136,7 @@ body {
     left: 0;
     top: 8vh;
 
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(50, 50, 50);
 
     transition: width 3.5s;
     transition-timing-function: linear;
@@ -76,7 +162,7 @@ body {
 }
 
 .mouse-hover.visible {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(230, 230, 230);
 }
 
 .mouse-hover.not-visible {
@@ -124,6 +210,10 @@ body {
     font-size: 5vh;
 }
 
+.icon-navigation-menu, .icon-navigation-menu:visited {
+    color: #000;
+}
+
 .icon-arrow-left, .icon-arrow-left:visited {
     color: #000;
 }
@@ -153,6 +243,13 @@ body {
     color: #fff;
 }
 
+.nav-bar .aesc {
+    position: relative;
+
+    font-size: 5vh;
+    color: #000;
+}
+
 .panel-menu {
     z-index: 999999999;
     position: fixed;
@@ -172,7 +269,7 @@ body {
     left: 0;
 }
 
-.panel-menu .header {
+.panel-menu .panel-menu-header {
     position: relative;
 
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -213,7 +310,7 @@ body {
     padding: 0;
 }
 
-.header-text {
+.header {
     font-size: 7em;
     font-family: "als direct";
     font-weight: normal;
@@ -277,13 +374,15 @@ li.active:before {
     color: #ef5d55;
 }
 
-/* Kek dobavil */
+.panel-menu-body ul a:hover {
+    color: #ef5d55;
+}
 
 progress {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1000;
+    z-index: 50;
 
     width: 100%;
     height: 0.7vh;
@@ -300,5 +399,3 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
     background-color: black;
 }
-
-/* Konec! */

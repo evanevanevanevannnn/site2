@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Internet Influence</title>
+	<script src="jquery.min.js"></script>
+
+	<!-- открыть панель меню -->
+	<script>
+		function open_panel_menu() {
+			if ($('.panel-menu').hasClass("opened")) {
+				$('.panel-menu').removeClass("opened");
+			}
+			else {
+				$('.panel-menu').addClass("opened");
+			}
+		}
+	</script>
+
+	<!-- информационная панель -->
+	<script>
+		function nav_menu_alert() {
+			$('.info').removeClass('finished');
+
+			setTimeout(function() {
+				$('.info-progress-bar').addClass('active');
+				$('.mouse-hover').addClass('visible');
+
+				setTimeout(function() {
+					$('.mouse-hover').removeClass('visible');
+					$('.mouse-hover').addClass('not-visible');
+					$('.info').addClass('finished');
+
+					setTimeout (function() {
+						$('.info').remove();
+					}, 1000);
+
+				}, 3500);
+			}, 500);
+		}
+	</script>
+	
+	<!-- прогресс бар -->
+	<script>
+		$(document).ready(function() {  
+			var winHeight = $(window).height(), 
+			docHeight = $(document).height(),
+			progressBar = $('progress'), max, value;
+
+			max = docHeight - winHeight;
+			progressBar.attr('max', max);
+
+			value = $(window).scrollTop();
+			progressBar.attr('value', value);
+
+			$(document).on('scroll', function(){
+				value = $(window).scrollTop();
+				progressBar.attr('value', value);
+			});
+		});
+	</script>
+	
+	<!-- шрифты -->
+	<style>
+		@font-face {
+			font-family: 'als direct';
+			src: url('fonts/ALS Direct Regular.otf');
+		}
+		@font-face {
+			font-family: 'als schlange sans';
+			src: url('fonts/ALS Schlange_sans_reg.otf');
+		}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="icofont.css">
+</head>
+<body onload="nav_menu_alert()">
+	<progress value="0"> </progress>
+	<div class="info finished">
+		<p class="icon-arrow-left icofont-arrow-left"></p>
+		<p>чтобы открыть меню навигации переместите курсор влево</p>
+		<div class="info-progress-bar" id="info-progress-bar"></div>
+	</div>
+
+	<div class="mouse-hover"></div>
+	<div class="open-menu-button"><p class="icon icofont-arrow-right"></p></div>
+
+	<div class="panel-menu">
+		<div class="panel-menu-header">
+			<div class="aesc">
+				<strong>AESC MSU</strong>
+			</div>
+			<a href="javascript:void(0);" onclick="open_panel_menu()" class="icon-close icofont-close"></a>
+		</div>
+		<div class="panel-menu-body">
+			<ul>
+				<li><a href="main.html">Главная</a></li>
+				<li class="active"><a href="internet.html">Интернет</a></li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="javascript:void(0);">Спорт</a></li>
+				<li><a href="javascript:void(0);">Наука</a></li>
+				<li><a href="javascript:void(0);">Категория 3</a></li>
+				<li><a href="javascript:void(0);">Категория 4</a></li>
+				<li><a href="javascript:void(0);">Категория 5</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="content first"><p class="header">ИНТЕРНЕТ</p></div>
+	<div class="content second">
+		<p style="color: #fff; font-size: 10vh; font-family: als schlange sans">
+			Some text here
+		</p>
+	</div>
+
+	<!-- выезжающая стрелка -->
+	<script>
+		$('.mouse-hover').hover(
+			function() {
+				$('.mouse-hover').css("visibility", "hidden");
+				if (!$('.panel-menu').hasClass("active")) {
+					$('.open-menu-button').addClass("opened");
+				}
+				else {
+					$('.open-menu-button').removeClass("opened");
+				}
+			}, function() {}
+		);
+
+		$(".open-menu-button").hover(
+			function() {},
+			function() {
+				$(".mouse-hover").css("visibility", "visible");
+				$('.open-menu-button').removeClass("opened");
+			}
+		).click(function() {
+			open_panel_menu();
+		});
+	</script>
+
+</body>
+</html>
