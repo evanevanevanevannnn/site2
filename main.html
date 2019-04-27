@@ -3,16 +3,16 @@
 <html>
 <head>
 	<title>Internet Influence</title>
-	<script src="jquery.min.js"></script>
+	<script src='jquery.min.js'></script>
 
 	<!-- открыть панель меню -->
 	<script>
 		function open_panel_menu() {
-			if ($('.panel-menu').hasClass("opened")) {
-				$('.panel-menu').removeClass("opened");
+			if ($('.panel-menu').hasClass('opened')) {
+				$('.panel-menu').removeClass('opened');
 			}
 			else {
-				$('.panel-menu').addClass("opened");
+				$('.panel-menu').addClass('opened');
 			}
 		}
 	</script>
@@ -34,47 +34,53 @@
 			src: url('fonts/ALS Schlange_sans_reg.otf');
 		}
 	</style>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="icofont.css">
+	<link rel='stylesheet' type='text/css' href='style.css'>
+	<link rel='stylesheet' type='text/css' href='icofont.css'>
 </head>
-<body onload="add_header()">
-	<div class="panel-menu">
-		<div class="panel-menu-header">
-			<div class="aesc">
+<body onload='add_header()'>
+	<div class='panel-menu'>
+		<div class='panel-menu-header'>
+			<div class='aesc'>
 				<strong>AESC MSU</strong>
 			</div>
-			<a href="javascript:void(0);" onclick="open_panel_menu()" class="icon-close icofont-close"></a>
+			<a href='javascript:void(0);' onclick='open_panel_menu()' class='icon-close icofont-close'></a>
 		</div>
-		<div class="panel-menu-body">
+		<div class='panel-menu-body'>
 			<ul>
-				<li class="active"><a href="main.html">Главная</a></li>
-				<li><a href="internet.html">Интернет</a></li>
+				<li class='active'><a href='main.html'>Главная</a></li>
+				<li><a href='internet.html'>Интернет</a></li>
 			</ul>
 			<br>
 			<ul>
-				<li><a href="javascript:void(0);">Спорт</a></li>
-				<li><a href="javascript:void(0);">Наука</a></li>
-				<li><a href="javascript:void(0);">Категория 3</a></li>
-				<li><a href="javascript:void(0);">Категория 4</a></li>
-				<li><a href="javascript:void(0);">Категория 5</a></li>
+				<li><a href='javascript:void(0);'>Спорт</a></li>
+				<li><a href='javascript:void(0);'>Наука</a></li>
+				<li><a href='javascript:void(0);'>Категория 3</a></li>
+				<li><a href='javascript:void(0);'>Категория 4</a></li>
+				<li><a href='javascript:void(0);'>Категория 5</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class='blank'></div>
 	<header>
 		<div class='nav-bar'>
-			<div><a href="javascript:void(0);" class="icon-navigation-menu icofont-navigation-menu" onclick="open_panel_menu()"></a></div>
+			<div><a href='javascript:void(0);' class='icon-navigation-menu icofont-navigation-menu' onclick='open_panel_menu()'></a></div>
 		</div>
 	</header>
 	<div class='article-wrapper'>
 		<div class='article'>
-			<img class='background' src="article1-negative.png">
-			<div class='article-content'></div>
+			<img class='background' src='article1.png'>
+			<div class='article-content'>
+				<p style="color: #000">some text here</p>
+			</div>
 		</div>
 	</div>
 	<div class='article-wrapper'>
-		<p>картинкассылка2<p>
-		<p>картинкассылка3</p>
+		<div class='article'>
+			<img class='background' src='article1.png'>
+		</div>
+		<div class='article'>
+			<img class='background' src='article1.png'>
+		</div>
 	</div>
 
 </body>

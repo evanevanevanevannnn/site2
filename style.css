@@ -24,11 +24,13 @@ header.active {
 }
 
 .article {
+    position: relative;
     width: 100%;
     height: auto;
 
     border-radius: 3vh;
     overflow: hidden;
+    margin: 0 2vw;
 
     border: 1px solid black;
 }
@@ -39,14 +41,13 @@ header.active {
 }
 
 .article-content {
-    position: absolute;
-    top: 0;
+    position: relative;
+
     left: 0;
+    top: 0;
 
     width: 100%;
     height: 100%;
-
-    padding: 0 10vw;
 }
 
 .blank {
@@ -61,7 +62,7 @@ header.active {
     z-index: 200;
     position: relative;
 
-    padding: 2vh 10vw;
+    padding: 2vh 20vw;
 
     display: flex;
     width: 100%;
@@ -87,9 +88,9 @@ header.active {
     justify-content: space-around;
 
     width: 100%;
-    margin: 10vh 0;
+    margin: 5vh 0;
 
-    padding: 0 10vw;
+    padding: 0 20vw;
 }
 
 .info {
