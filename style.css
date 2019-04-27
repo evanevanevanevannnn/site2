@@ -291,11 +291,12 @@ progress {
     height: 0.7vh;
 
     border: none;
-    background-color: white;
+
+    -webkit-appearance: none;
 }
 
 progress::-webkit-progress-bar {
-    background-color: white;
+    background-color: transparent;
 }
 
 progress::-webkit-progress-value {
