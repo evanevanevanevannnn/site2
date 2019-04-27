@@ -6,28 +6,45 @@
 	<script src="jquery.min.js"></script>
 	<script>
 		function myFunction() {
-			if ($('#panel-menu').hasClass("active")) {
-				$('#panel-menu').removeClass("active");
+			if ($('.panel-menu').hasClass("opened")) {
+				$('.panel-menu').removeClass("opened");
 			}
 			else {
-				$('#panel-menu').addClass("active");
+				$('.panel-menu').addClass("opened");
 			}
 		}
 	</script>
 	<script>
-		$(window).scroll(function() {
-			console.log("fuck");
-		});
+		function nav_menu_alert() {
+			$('.info-progress-bar').addClass('active');
+			$('.mouse-hover').addClass('visible');
+
+			setTimeout(function() {
+				$('.mouse-hover').removeClass('visible');
+				$('.mouse-hover').addClass('not-visible');
+				$('.info').addClass('finished');
+
+				setTimeout (function() {
+					$('.info').remove();
+				}, 1000);
+
+			}, 3500);
+		}
 	</script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="icofont.css">
 </head>
-<body>
-	<div class="mouse-hover" id="mouse-hover"></div>
-	<div class="open-menu-button" id="open-menu-button">
-		<p class="icon-arrow-right icofont-arrow-right"></p>
+<body onload="nav_menu_alert()">
+	<div class="info">
+		<p class="icon-arrow-left icofont-arrow-left"></p>
+		<p>чтобы открыть меню навигации переместите курсор влево</p>
+		<div class="info-progress-bar" id="info-progress-bar"></div>
 	</div>
-	<div class="panel-menu" id="panel-menu">
+	<div class="mouse-hover"></div>
+	<div class="open-menu-button">
+		<p class="icon icofont-arrow-right"></p>
+	</div>
+	<div class="panel-menu">
 		<div class="header">
 			<div class="aesc">
 				<strong>AESC MSU</strong>
@@ -52,23 +69,23 @@
 	</div>
 
 	<script>
-		$('#mouse-hover').hover(
+		$('.mouse-hover').hover(
 			function() {
-				$('#mouse-hover').css("visibility", "hidden");
-				if (!$('#panel-menu').hasClass("active")) {
-					$('#open-menu-button').addClass("opened");
+				$('.mouse-hover').css("visibility", "hidden");
+				if (!$('.panel-menu').hasClass("active")) {
+					$('.open-menu-button').addClass("opened");
 				}
 				else {
-					$('#open-menu-button').removeClass("opened");
+					$('.open-menu-button').removeClass("opened");
 				}
 			}, function() {}
 		);
 
-		$("#open-menu-button").hover(
+		$(".open-menu-button").hover(
 			function() {},
 			function() {
-				$("#mouse-hover").css("visibility", "visible");
-				$('#open-menu-button').removeClass("opened");
+				$(".mouse-hover").css("visibility", "visible");
+				$('.open-menu-button').removeClass("opened");
 			}
 		).click(function() {
 			myFunction();
