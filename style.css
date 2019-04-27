@@ -32,7 +32,6 @@ body {
 
     font-size: 2em;
     font-family: "als schlange sans";
-    font-weight: light;
 }
 
 .info p:first-child {
@@ -269,7 +268,6 @@ li.active:before {
 
 .panel-menu-body ul a {
     font-family: "als schlange sans";
-    font-weight: light;
     font-size: 1.25em;
     text-decoration: none;
     color: #fff;
