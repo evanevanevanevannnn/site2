@@ -367,8 +367,20 @@ header.active {
     height: 65vh;
     overflow-y: scroll;
 
-    margin: 5vh 0;
+    margin: 5vh 2vh;
 }
+
+.panel-menu-body::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 1vh;
+    background-color: #000;
+}
+
+.panel-menu-body::-webkit-scrollbar-thumb {
+    border-radius: 1vh;
+    background-color: #f5f5f5;
+}
+
 
 .social-media-boxes {
     width: 100%;
