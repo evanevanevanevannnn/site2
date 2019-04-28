@@ -259,7 +259,7 @@ header.active {
 
 .icon-close, .icon-close:visited {
     position: absolute;
-    left: 43vh;
+    right: 2vh;
     top: 2vh;
 }
 
@@ -293,9 +293,9 @@ header.active {
     z-index: 999999999;
     position: fixed;
 
-    left: -50vh;
+    left: -48vh;
     top: 0;
-    width: 50vh;
+    width: 48vh;
     height: 100%;
 
     transition: left 200ms;
@@ -364,7 +364,7 @@ header.active {
 }
 
 .panel-menu-body {
-    height: auto;
+    height: 65vh;
     overflow-y: scroll;
 
     margin: 5vh 0;
@@ -372,6 +372,7 @@ header.active {
 
 .social-media-boxes {
     width: 100%;
+    height: 16vh;
 
     display: flex;
     flex-direction: row;
@@ -379,8 +380,6 @@ header.active {
 }
 
 .social-media-boxes a .box {
-    height: 100%;
-
     border-top: 1px solid white;
     border-left: 1px solid white;
 }
