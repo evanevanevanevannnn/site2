@@ -17,6 +17,7 @@
 		}
 	</script>
 	
+	<!-- выезжающий хедер -->
 	<script>
 		function add_header() {
 			$('header').addClass('active');
@@ -34,6 +35,7 @@
 			src: url('fonts/ALS Schlange_sans_reg.otf');
 		}
 	</style>
+
 	<link rel='stylesheet' type='text/css' href='style.css'>
 	<link rel='stylesheet' type='text/css' href='icofont.css'>
 </head>
@@ -60,27 +62,44 @@
 			</ul>
 		</div>
 	</div>
+
 	<div class='blank'></div>
 	<header>
 		<div class='nav-bar'>
 			<div><a href='javascript:void(0);' class='icon-navigation-menu icofont-navigation-menu' onclick='open_panel_menu()'></a></div>
 		</div>
 	</header>
+
 	<div class='article-wrapper'>
-		<div class='article'>
-			<img class='background' src='article1.png'>
-			<div class='article-content'>
-				<p style="color: #000">some text here</p>
+		<a href='internet.html'>
+			<div class='article'>
+				<img class='background' src='article1.png'>
+				<div class='article-content'>
+					<p class='title'>ИНТЕРНЕТ</p>
+					<p class='description'>и его влияние на учеников лучшей школы России</p>
+				</div>
 			</div>
-		</div>
+		</a>
 	</div>
 	<div class='article-wrapper'>
-		<div class='article'>
-			<img class='background' src='article1.png'>
-		</div>
-		<div class='article'>
-			<img class='background' src='article1.png'>
-		</div>
+		<a href="javascript:void(0);">
+			<div class='article'>
+				<img class='background' src='article2.png'>
+				<div class='article-content'>
+					<p class='title'>СТАТЬЯ 2</p>
+					<p class='description'>и ее интересное описание</p>
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);">
+			<div class='article'>
+				<img class='background' src='article3.png'>
+				<div class='article-content'>
+					<p class='title'>СТАТЬЯ 3</p>
+					<p class='description'>и ее не менее интересное описание</p>
+				</div>
+			</div>
+		</a>
 	</div>
 
 </body>
