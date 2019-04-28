@@ -46,7 +46,7 @@ header.active {
     font-family: 'als direct';
     font-size: 2em;
 
-    margin: 0 0 0vh 1vh;
+    margin: 0 0 0 1vh;
 }
 
 .article .description {
@@ -301,6 +301,10 @@ header.active {
     transition: left 200ms;
     transition-timing-function: ease;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     background-color: #242424;
 }
 
@@ -361,13 +365,12 @@ header.active {
 
 .panel-menu-body {
     height: auto;
-    padding: 3vh 1vh 15vh 0;
+    overflow-y: scroll;
+
+    margin: 5vh 0;
 }
 
 .social-media-boxes {
-    position: absolute;
-    bottom: 0;
-
     width: 100%;
 
     display: flex;
