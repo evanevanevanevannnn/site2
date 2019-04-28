@@ -62,11 +62,11 @@
 			</ul>
 		</div>
 		<div class='social-media-boxes'>
-			<a href="javascript:void(0);">
+			<a href="javascript:void(0);" class='media-box'>
 				<div class='box'><img class='background' src="VK_logo_grey.png"></div></a>
-			<a href="javascript:void(0);">
+			<a href="javascript:void(0);" class='media-box'>
 				<div class='box'><img class='background' src="FB_logo_grey.png"></div></a>
-			<a href="javascript:void(0);">
+			<a href="javascript:void(0);" class='media-box'>
 				<div class='box'><img class='background' src="TW_logo_grey.png"></div></a>
 		</div>
 	</div>
@@ -110,5 +110,16 @@
 		</a>
 	</div>
 
+	<script>
+		$('.media-box').hover(function() {
+			var child = $(this).find('img');
+			var str = child.attr('src').substr(0, 8) + 'blue.png';
+			child.attr('src', str);
+		}, function() {
+			var child = $(this).find('img');
+			var str = child.attr('src').substr(0, 8) + 'grey.png';
+			child.attr('src', str);
+		});
+	</script>
 </body>
 </html>
